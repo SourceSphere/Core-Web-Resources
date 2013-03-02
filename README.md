@@ -1,4 +1,4 @@
-Core-Web-Resources
-==================
+Core
+====
 
-Web resources for your web apps
+Core Framework
