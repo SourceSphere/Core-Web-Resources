@@ -116,14 +116,16 @@ public class ResourceServlet extends HttpServlet
 	public void init(ServletConfig config) throws ServletException 
 	{
 		super.init(config);
+		log.info("Initializing Sourcesphere ResourceServlet '"+config.getServletName()+"'");
 		try
 		{
 			this.cacheTimeout = Integer.parseInt(config.getInitParameter("cacheTimeout"));
+			log.debug("The cache has been set to "+this.cacheTimeout+" seconds");
 		}
 		catch(Exception e)
 		{
-			log.warn("The cache timeout is valid, setting to default value",e);
 			this.cacheTimeout = 86400;
+			log.warn("The cache timeout has not been configured on web.xml. Setting to default value of "+this.cacheTimeout+"' seconds");
 		}
 	}
 	
@@ -131,10 +133,9 @@ public class ResourceServlet extends HttpServlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		String resourcePath = request.getPathInfo();
-		
 		if (!isAllowed(resourcePath)) 
 		{
-			log.warn("An attempt to access a protected resource at " + resourcePath + " was disallowed.");
+			log.warn("An attempt to access a protected/invalid resource at '" + resourcePath + "' failed");
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			return;
 		}
@@ -142,10 +143,11 @@ public class ResourceServlet extends HttpServlet
 		URL resource = ResourceServlet.class.getResource(resourcePath);
 		if (resource == null) 
 		{
-			log.warn("Resource " + resourcePath + " not found.");
+			log.warn("Resource '" + resourcePath + "' not found.");
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			return;
 		}
+		log.info("Resource found, loading it to the front-end output stream");
 		prepareResponse(response, resource, resourcePath);
 		
 		OutputStream out = response.getOutputStream();
@@ -178,6 +180,7 @@ public class ResourceServlet extends HttpServlet
 	 */
 	private void prepareResponse(HttpServletResponse response, URL resource, String rawResourcePath) throws IOException 
 	{
+		log.debug("Preparing the response for the found resource");
 		long lastModified = -1;
 		int contentLength = 0;
 		String mimeType = null;
@@ -229,6 +232,7 @@ public class ResourceServlet extends HttpServlet
 	 */
 	private void configureCaching(HttpServletResponse response, Integer seconds) 
 	{
+		log.debug("Setting the response cache timeout for the resource found");
 		// HTTP 1.0 header
 		response.setDateHeader(HTTP_EXPIRES_HEADER, System.currentTimeMillis() + seconds * 1000L);
 		
