@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	 
+	<tlib-version>1.0</tlib-version>
+	<short-name>sc</short-name>
+	<uri>http://sourcesphere.com.br/jsp/tags/style-bootstrap/sc</uri>
+	 
+	<tag-file>
+		<name>alert</name>
+		<path>/META-INF/tags/style-bootstrap/alert.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>combobox</name>
+		<path>/META-INF/tags/style-bootstrap/combobox.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>dateField</name>
+		<path>/META-INF/tags/style-bootstrap/dateField.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>label</name>
+		<path>/META-INF/tags/style-bootstrap/label.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>loading</name>
+		<path>/META-INF/tags/style-bootstrap/loading.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>messageBox</name>
+		<path>/META-INF/tags/style-bootstrap/messageBox.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>numericField</name>
+		<path>/META-INF/tags/style-bootstrap/numericField.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>popover</name>
+		<path>/META-INF/tags/style-bootstrap/popover.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>popup</name>
+		<path>/META-INF/tags/style-bootstrap/popup.tag</path>
+	</tag-file>
+ 
+
+</taglib>

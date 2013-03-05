@@ -1,6 +1,6 @@
 <%@ tag language="java" pageEncoding="ISO-8859-1"%>
 
-<%@ taglib tagdir="/src/main/resources/META-INF/tags" prefix="rs" %>
+<%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
 <%@ attribute name="texto" required="true" %>

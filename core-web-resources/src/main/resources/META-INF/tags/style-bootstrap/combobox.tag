@@ -2,7 +2,7 @@
 
 <!-- TAGLIBS -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib tagdir="/src/main/resources/META-INF/tags" prefix="rs" %>
+<%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
 <%@ attribute name="id" required="false" %>
