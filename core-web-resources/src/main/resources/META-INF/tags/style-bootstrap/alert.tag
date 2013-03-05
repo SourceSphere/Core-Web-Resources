@@ -1,0 +1,44 @@
+<%@ tag language="java" pageEncoding="ISO-8859-1"%>
+
+<!-- TAGLIB's -->
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib tagdir="/src/main/resources/META-INF/tags" prefix="rs" %>
+
+<!-- ATRIBUTOS -->
+<%@ attribute name="id" required="true" %>
+<%@ attribute name="titulo" required="true" %>
+<%@ attribute name="texto" required="true" %>
+<%@ attribute name="tipo" required="false" description="Tipo do Alerta: alert-success | alert-info | alert-warning" %>
+<%@ attribute name="align" required="false" %>
+<%@ attribute name="width" required="false" %>
+<%@ attribute name="height" required="false" %>
+<%@ attribute name="hidden" required="false" %>
+<%@ attribute name="classe" required="false" %>
+
+<!-- URL's -->
+<c:url value="/webresources/jquery/JQuery.js" var="jquery"/>
+<c:url value="/webresources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
+
+<!-- Verify if resource servlet has been loaded -->
+<rs:verifyResourceServlet/>
+
+<!-- IMPORT JQUERY+BOOTSTRAP -->
+<script type="text/javascript" src="${jquery}"></script>
+<script type="text/javascript" src="${bootstrap_js}"></script>
+
+<!-- HTML -->
+<div align="${align}">
+	<div id="${id}" class="alert ${tipo} fade in ${classe}" style="width: ${width};height: ${height};" ${hidden}>
+	  <button type="button" class="close" data-dismiss="alert">×</button>
+	  <strong>${titulo}</strong>
+	  <p>${texto}</p>
+	</div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$("#${id}").alert();
+	});
+</script>

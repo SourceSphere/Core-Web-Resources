@@ -1,4 +1,4 @@
-package br.com.sourcesphere.corewebresources.servlet;
+package br.com.sourcesphere.core.webresources.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,10 +26,9 @@ import br.com.sourcesphere.core.util.ResourcePathMatcher;
  * Servlet for handling internal resources
  * In order to use this servlet, you must declare it on your web project's web.xml
  * <p>Ex:
- * <!-- SERVLET DO CORE-WEBRESOURCES -->
  *	<servlet>
  *		<servlet-name>webresources</servlet-name>
- *		<servlet-class>br.com.sourcesphere.corewebresources.servlet.ResourceServlet</servlet-class>
+ *		<servlet-class>br.com.sourcesphere.core.webresources.servlet.ResourceServlet</servlet-class>
  *		<init-param>
  *			<param-name>cacheTimeout</param-name>
  *			<param-value>86400</param-value>
@@ -132,6 +131,12 @@ public class ResourceServlet extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		if(request.getParameter("ResourceServletTest") != null)
+		{
+			response.getWriter().print("ResourceServlet has been initialized successfull !");
+			return;
+		}
+		
 		String resourcePath = request.getPathInfo();
 		if (!isAllowed(resourcePath)) 
 		{

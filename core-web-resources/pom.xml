@@ -136,14 +136,6 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-
-		<!-- TEST RESOURCES -->
-		<testResources>
-	        <testResource>
-	            <directory>src/test/resources</directory>
-	            <filtering>true</filtering>
-	        </testResource>
-	    </testResources>
 	</build>
 
 	<!-- DEPENDÊNCIAS -->
