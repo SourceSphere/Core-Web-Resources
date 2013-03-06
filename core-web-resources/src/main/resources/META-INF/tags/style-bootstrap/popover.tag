@@ -5,13 +5,13 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="value" required="true" %>
-<%@ attribute name="classe" required="true" %>
-<%@ attribute name="titulo" required="true" %>
-<%@ attribute name="texto" required="true" %>
-<%@ attribute name="href" required="false" %>
-<%@ attribute name="position" required="false" description="top | bottom | right | left"%>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="value" required="true" type="java.lang.String" %>
+<%@ attribute name="classe" required="true" type="java.lang.String" %>
+<%@ attribute name="titulo" required="true" type="java.lang.String" %>
+<%@ attribute name="texto" required="true" type="java.lang.String" %>
+<%@ attribute name="href" required="false" type="java.lang.String" %>
+<%@ attribute name="position" required="false" description="top | bottom | right | left" type="java.lang.String" %>
 
 <!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
@@ -19,10 +19,10 @@
 <!-- HTML -->
 <c:choose>
 	<c:when test="${href != null}">
-		<a id="${id}" data-original-title="${titulo}" href="${href}" data-content="${texto}" class="${classe}" rel="popover">${value}</a>
+		<a id="${identificador}" data-original-title="${titulo}" href="${href}" data-content="${texto}" class="${classe}" rel="popover">${value}</a>
 	</c:when>
 	<c:otherwise>
-		<a id="${id}" data-original-title="${titulo}" data-content="${texto}" class="${classe}" rel="popover">${value}</a>
+		<a id="${identificador}" data-original-title="${titulo}" data-content="${texto}" class="${classe}" rel="popover">${value}</a>
 	</c:otherwise>
 </c:choose>
 
@@ -33,6 +33,6 @@
 		var position = '${position}';
 		if(position == "")
 			position = 'right';
-		$('#${id}').popover({placement:position});
+		$('#${identificador}').popover({placement:position});
 	});
 </script>

@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
-<%@ attribute name="id" required="true" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
 <%@ attribute name="value" required="false" type="java.util.Calendar"%>
 
 <!-- Sourcesphere dependencies check -->
@@ -12,9 +12,9 @@
 <fmt:formatDate value="${value.time}" pattern="dd/MM/yyyy" var="data"/>
 
 <!-- Campo de Texto -->
-<input type="text" id="${id}" name="${id}" value="${data}" readonly/>
+<input type="text" id="${identificador}" name="${identificador}" value="${data}" readonly/>
 
 <!-- Datepicker(JQUERY) -->
 <script type="text/javascript">
-	$("#${id}").datepicker({dateFormat: 'dd/mm/yy',changeYear: 1,changeMonth: 1});
+	$("#${identificador}").datepicker({dateFormat: 'dd/mm/yy',changeYear: 1,changeMonth: 1});
 </script>

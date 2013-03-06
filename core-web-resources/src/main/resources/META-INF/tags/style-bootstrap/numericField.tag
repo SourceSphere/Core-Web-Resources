@@ -5,20 +5,20 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="name" required="false" %>
-<%@ attribute name="classe" required="false" %>
-<%@ attribute name="placeholder" required="false"%>
-<%@ attribute name="maxlength" required="false"%>
-<%@ attribute name="value" required="false" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="nome" required="false" type="java.lang.String" %>
+<%@ attribute name="classe" required="false" type="java.lang.String" %>
+<%@ attribute name="placeholder" required="false" type="java.lang.String" %>
+<%@ attribute name="maxlength" required="false" type="java.lang.String" %>
+<%@ attribute name="value" required="false" type="java.lang.String" %>
 
 <!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
-<input id="${id}" name="${name}" type="text" class="${classe}" maxlength="${maxlength}" placeholder="${placeholder}" value="${value}">
+<input id="${identificador}" name="${nome}" type="text" class="${classe}" maxlength="${maxlength}" placeholder="${placeholder}" value="${value}">
 
 <script type="text/javascript">
-	$('#${id}').bind('keypress', function(evt)
+	$('#${identificador}').bind('keypress', function(evt)
 	{
 		var charCode = (evt.which) ? evt.which : event.keyCode;
 		   if (charCode > 31 && (charCode < 48 || charCode > 57))

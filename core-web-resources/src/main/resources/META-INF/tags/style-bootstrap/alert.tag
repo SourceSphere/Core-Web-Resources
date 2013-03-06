@@ -5,22 +5,22 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="titulo" required="true" %>
-<%@ attribute name="texto" required="true" %>
-<%@ attribute name="tipo" required="false" description="Tipo do Alerta: alert-success | alert-info | alert-warning" %>
-<%@ attribute name="align" required="false" %>
-<%@ attribute name="width" required="false" %>
-<%@ attribute name="height" required="false" %>
-<%@ attribute name="hidden" required="false" %>
-<%@ attribute name="classe" required="false" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="titulo" required="true" type="java.lang.String" %>
+<%@ attribute name="texto" required="true" type="java.lang.String" %>
+<%@ attribute name="tipo" required="false" description="Tipo do Alerta: alert-success | alert-info | alert-warning" type="java.lang.String" %>
+<%@ attribute name="align" required="false" type="java.lang.String" %>
+<%@ attribute name="width" required="false" type="java.lang.String" %>
+<%@ attribute name="height" required="false" type="java.lang.String" %>
+<%@ attribute name="hidden" required="false" type="java.lang.String" %>
+<%@ attribute name="classe" required="false" type="java.lang.String" %>
 
 <!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->
 <div align="${align}">
-	<div id="${id}" class="alert ${tipo} fade in ${classe}" style="width: ${width};height: ${height};" ${hidden}>
+	<div id="${identificador}" class="alert ${tipo} fade in ${classe}" style="width: ${width};height: ${height};" ${hidden}>
 	  <button type="button" class="close" data-dismiss="alert">×</button>
 	  <strong>${titulo}</strong>
 	  <p>${texto}</p>
@@ -31,6 +31,6 @@
 <script type="text/javascript">
 	$(document).ready(function()
 	{
-		$("#${id}").alert();
+		$("#${identificador}").alert();
 	});
 </script>

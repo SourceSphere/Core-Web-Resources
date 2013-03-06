@@ -5,19 +5,19 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="component" required="true" %>
-<%@ attribute name="titulo" required="false" %>
-<%@ attribute name="texto" required="false" %>
-<%@ attribute name="rodape" required="false" %>
-<%@ attribute name="imagem" required="false" %>
-<%@ attribute name="retornar" required="false" description="Exibir botão de retorno(valor = 'retornar')" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="component" required="true" type="java.lang.String" %>
+<%@ attribute name="titulo" required="false" type="java.lang.String" %>
+<%@ attribute name="texto" required="false" type="java.lang.String" %>
+<%@ attribute name="rodape" required="false" type="java.lang.String" %>
+<%@ attribute name="imagem" required="false" type="java.lang.String" %>
+<%@ attribute name="retornar" required="false" description="Exibir botão de retorno(valor = 'retornar')" type="java.lang.String" %>
 
 <!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- POPUP -->
-<div id="${id}" class="modal hide fade">
+<div id="${identificador}" class="modal hide fade">
 	<div class="modal-header">
 		<button class="close" data-dismiss="modal">x</button>
 		<c:if test="${imagem != null}">
@@ -32,7 +32,7 @@
 	<div class="modal-footer">
 		<c:if test="${retornar == 'retornar'}">
 			<div class="pull-left">${rodape}</div>
-			<a id="btnVoltar_${id}" href="#" class="btn btn-success"><b>Voltar</b></a>
+			<a id="btnVoltar_${identificador}" href="#" class="btn btn-success"><b>Voltar</b></a>
 		</c:if>
 	</div>
 	
@@ -44,13 +44,13 @@
 	{
 		$('#${component}').click(function(event) 
 		{
-			$('#${id}').modal('toggle');
-			$('#${id}').modal('show');
+			$('#${identificador}').modal('toggle');
+			$('#${identificador}').modal('show');
 		});
 		
-		$('#btnVoltar_${id}').click(function(event) 
+		$('#btnVoltar_${identificador}').click(function(event) 
 		{
-			$('#${id}').modal('hide');
+			$('#${identificador}').modal('hide');
 		});
 		
 	});

@@ -5,10 +5,10 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="align" required="false" %>
-<%@ attribute name="width" required="false" %>
-<%@ attribute name="height" required="false" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="align" required="false" type="java.lang.String" %>
+<%@ attribute name="width" required="false" type="java.lang.String" %>
+<%@ attribute name="height" required="false" type="java.lang.String" %>
 
 <!-- URL's -->
 <c:url value="/webresources/img/loading.gif" var="loading"/>
@@ -18,7 +18,7 @@
 
 <!-- HTML -->
 <div align="${align}">
-<div id="${id}" class="alert alert-info fade in" style="width: ${width};height: ${height};">
+<div id="${identificador}" class="alert alert-info fade in" style="width: ${width};height: ${height};">
   <button type="button" class="close" data-dismiss="alert">×</button>
   <strong>Aguarde</strong>
   <p>Carregando...&nbsp;<img src="${loading}"/></p>
@@ -29,6 +29,6 @@
 <script type="text/javascript">
 	$(document).ready(function()
 	{
-		$("#${id}").alert();
+		$("#${identificador}").alert();
 	});
 </script>

@@ -6,10 +6,10 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="true" %>
-<%@ attribute name="tipo" required="true" description="Tipo de Alerta: success | information | question | alert" %>
-<%@ attribute name="titulo" required="false" %>
-<%@ attribute name="mensagem" required="false" %>
+<%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="tipo" required="true" description="Tipo de Alerta: success | information | question | alert" type="java.lang.String" %>
+<%@ attribute name="titulo" required="false" type="java.lang.String" %>
+<%@ attribute name="mensagem" required="false" type="java.lang.String" %>
 
 <!-- URL's -->
 <c:url value="/webresources/img/sucesso.png" var="success"/>
@@ -40,7 +40,7 @@
 
 
 <!-- POPUP -->
-<div id="${id}" class="modal hide fade">
+<div id="${identificador}" class="modal hide fade">
 
 	<div style="background-color: silver;" class="modal-header">
 		<button class="close" data-dismiss="modal">x</button>
@@ -66,7 +66,7 @@
 	{
 		$('#btnOk').click(function(event) 
 		{
-			$('#${id}').modal('hide');
+			$('#${identificador}').modal('hide');
 		});
 	});
 </script>

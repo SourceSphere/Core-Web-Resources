@@ -5,17 +5,17 @@
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
-<%@ attribute name="id" required="false" %>
+<%@ attribute name="identificador" required="false" type="java.lang.String" %>
 <%@ attribute name="dados" required="true" type="java.util.List" %>
-<%@ attribute name="converter" required="true" type="br.com.ggdio.receitas.converter.Converter" %>
-<%@ attribute name="name" required="false" %>
+<%@ attribute name="converter" required="true" type="br.com.sourcesphere.core.converter.Converter" %>
+<%@ attribute name="name" required="false" type="java.lang.String" %>
 <%@ attribute name="selecionado" required="false" type="java.lang.String" %>
 
 <!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- COMBOBOX HTML -->
-<select id="${id}" class="combobox" name="${name}">
+<select id="${identificador}" class="combobox" name="${nome}">
 	<option selected="selected">${selecionado}</option>
 	<c:forEach items="${dados}" var="dado">
 		<option>${converter.convertTo(dado)}</option>
