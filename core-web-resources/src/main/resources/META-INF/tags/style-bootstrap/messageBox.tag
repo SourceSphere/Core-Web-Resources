@@ -12,19 +12,13 @@
 <%@ attribute name="mensagem" required="false" %>
 
 <!-- URL's -->
-<c:url value="/resources/img/sucesso.png" var="success"/>
-<c:url value="/resources/img/info.png" var="information"/>
-<c:url value="/resources/img/pergunta.png" var="question"/>
-<c:url value="/resources/img/alerta.png" var="alert"/>
-<c:url value="/resources/jquery/JQuery.js" var="jquery"/>
-<c:url value="/resources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
+<c:url value="/webresources/img/sucesso.png" var="success"/>
+<c:url value="/webresources/img/info.png" var="information"/>
+<c:url value="/webresources/img/pergunta.png" var="question"/>
+<c:url value="/webresources/img/alerta.png" var="alert"/>
 
-
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${bootstrap_js}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- ÍCONE DA MENSAGEM -->

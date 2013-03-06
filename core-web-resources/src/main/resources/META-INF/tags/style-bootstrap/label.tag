@@ -8,7 +8,8 @@
 <%@ attribute name="align" required="false" %>
 <%@ attribute name="fontSize" required="false" %>
 
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->

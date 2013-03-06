@@ -11,15 +11,10 @@
 <%@ attribute name="height" required="false" %>
 
 <!-- URL's -->
-<c:url value="/resources/jquery/JQuery.js" var="jquery"/>
-<c:url value="/resources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
-<c:url value="/resources/img/loading.gif" var="loading"/>
+<c:url value="/webresources/img/loading.gif" var="loading"/>
 
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${bootstrap_js}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->

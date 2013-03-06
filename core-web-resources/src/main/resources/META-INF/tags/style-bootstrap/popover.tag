@@ -13,15 +13,8 @@
 <%@ attribute name="href" required="false" %>
 <%@ attribute name="position" required="false" description="top | bottom | right | left"%>
 
-<!-- URL's -->
-<c:url value="/resources/jquery/JQuery.js" var="jquery"/>
-<c:url value="/resources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
-
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${bootstrap_js}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->

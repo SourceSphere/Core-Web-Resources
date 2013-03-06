@@ -12,15 +12,8 @@
 <%@ attribute name="maxlength" required="false"%>
 <%@ attribute name="value" required="false" %>
 
-<!-- URL's -->
-<c:url value="/webresources/jquery/JQuery.js" var="jquery"/>
-<c:url value="/webresources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
-
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${bootstrap_js}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <input id="${id}" name="${name}" type="text" class="${classe}" maxlength="${maxlength}" placeholder="${placeholder}" value="${value}">

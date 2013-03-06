@@ -5,14 +5,8 @@
 <%@ attribute name="id" required="true" %>
 <%@ attribute name="value" required="false" type="java.util.Calendar"%>
 
-<!-- URL's -->
-<c:url value="/webresources/jquery/JQuery.js" var="jquery"/>
-
-
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- Formatação da Data -->

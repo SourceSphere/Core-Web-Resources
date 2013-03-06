@@ -13,15 +13,8 @@
 <%@ attribute name="imagem" required="false" %>
 <%@ attribute name="retornar" required="false" description="Exibir botão de retorno(valor = 'retornar')" %>
 
-<!-- URL's -->
-<c:url value="/webresources/jquery/JQuery.js" var="jquery"/>
-<c:url value="/webresources/bootstrap/js/bootstrap.js" var="bootstrap_js"/>
-
-<!-- IMPORT JQUERY+BOOTSTRAP -->
-<script type="text/javascript" src="${jquery}"></script>
-<script type="text/javascript" src="${bootstrap_js}"></script>
-
-<!-- Verify if resource servlet has been loaded -->
+<!-- Sourcesphere dependencies import/check -->
+<rs:importDependencies/>
 <rs:verifyResourceServlet/>
 
 <!-- POPUP -->
