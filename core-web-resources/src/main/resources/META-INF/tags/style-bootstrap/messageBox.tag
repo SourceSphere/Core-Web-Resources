@@ -17,8 +17,7 @@
 <c:url value="/webresources/img/pergunta.png" var="question"/>
 <c:url value="/webresources/img/alerta.png" var="alert"/>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- ÍCONE DA MENSAGEM -->

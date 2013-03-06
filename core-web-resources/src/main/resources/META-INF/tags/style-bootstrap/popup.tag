@@ -13,8 +13,7 @@
 <%@ attribute name="imagem" required="false" %>
 <%@ attribute name="retornar" required="false" description="Exibir botão de retorno(valor = 'retornar')" %>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- POPUP -->

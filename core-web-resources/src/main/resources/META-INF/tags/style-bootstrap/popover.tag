@@ -13,8 +13,7 @@
 <%@ attribute name="href" required="false" %>
 <%@ attribute name="position" required="false" description="top | bottom | right | left"%>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->

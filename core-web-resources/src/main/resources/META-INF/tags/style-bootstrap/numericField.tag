@@ -12,8 +12,7 @@
 <%@ attribute name="maxlength" required="false"%>
 <%@ attribute name="value" required="false" %>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <input id="${id}" name="${name}" type="text" class="${classe}" maxlength="${maxlength}" placeholder="${placeholder}" value="${value}">

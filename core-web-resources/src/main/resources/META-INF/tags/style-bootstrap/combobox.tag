@@ -11,8 +11,7 @@
 <%@ attribute name="name" required="false" %>
 <%@ attribute name="selecionado" required="false" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- COMBOBOX HTML -->

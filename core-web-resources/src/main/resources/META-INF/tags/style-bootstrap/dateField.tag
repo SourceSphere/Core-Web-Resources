@@ -5,8 +5,7 @@
 <%@ attribute name="id" required="true" %>
 <%@ attribute name="value" required="false" type="java.util.Calendar"%>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- Formatação da Data -->

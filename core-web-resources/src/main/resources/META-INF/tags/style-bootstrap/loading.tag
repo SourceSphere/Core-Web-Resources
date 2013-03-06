@@ -13,8 +13,7 @@
 <!-- URL's -->
 <c:url value="/webresources/img/loading.gif" var="loading"/>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->

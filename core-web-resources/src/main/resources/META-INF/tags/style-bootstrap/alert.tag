@@ -15,8 +15,7 @@
 <%@ attribute name="hidden" required="false" %>
 <%@ attribute name="classe" required="false" %>
 
-<!-- Sourcesphere dependencies import/check -->
-<rs:importDependencies/>
+<!-- Sourcesphere dependencies check -->
 <rs:verifyResourceServlet/>
 
 <!-- HTML -->
