@@ -10,7 +10,7 @@
 <fmt:formatDate value="${value.time}" pattern="dd/MM/yyyy" var="data"/>
 
 <!-- Campo de Texto -->
-<input type="text" id="${identificador}" name="${nome}" value="${data}" readonly/>
+<input type="text" id="${identificador}" name="${nome}" value="${data}"/>
 
 <!-- Datepicker(JQUERY) -->
 <script type="text/javascript">
