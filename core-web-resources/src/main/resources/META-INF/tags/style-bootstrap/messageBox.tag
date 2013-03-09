@@ -17,9 +17,6 @@
 <c:url value="/webresources/img/pergunta.png" var="question"/>
 <c:url value="/webresources/img/alerta.png" var="alert"/>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- ÍCONE DA MENSAGEM -->
 <c:if test="${tipo == 'success'}">
 	<c:set var="icone" value="${success}"/>

@@ -12,9 +12,6 @@
 <%@ attribute name="maxlength" required="false" type="java.lang.String" %>
 <%@ attribute name="value" required="false" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <input id="${identificador}" name="${nome}" type="text" class="${classe}" maxlength="${maxlength}" placeholder="${placeholder}" value="${value}">
 
 <script type="text/javascript">

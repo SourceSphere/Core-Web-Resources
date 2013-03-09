@@ -11,12 +11,9 @@
 <%@ attribute name="name" required="false" type="java.lang.String" %>
 <%@ attribute name="selecionado" required="false" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- COMBOBOX HTML -->
 <select id="${identificador}" class="combobox" name="${nome}">
-	<option selected="selected">${selecionado}</option>
+	<option selected="selected">${converter.convertTo(selecionado)}</option>
 	<c:forEach items="${dados}" var="dado">
 		<option>${converter.convertTo(dado)}</option>
 	</c:forEach>

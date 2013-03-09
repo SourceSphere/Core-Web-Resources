@@ -13,9 +13,6 @@
 <%@ attribute name="href" required="false" type="java.lang.String" %>
 <%@ attribute name="position" required="false" description="top | bottom | right | left" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- HTML -->
 <c:choose>
 	<c:when test="${href != null}">

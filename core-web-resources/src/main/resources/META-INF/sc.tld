@@ -6,6 +6,11 @@
 	<tlib-version>1.0</tlib-version>
 	<short-name>sc</short-name>
 	<uri>http://sourcesphere.com.br/jsp/tags/style-bootstrap/sc</uri>
+	
+	<tag-file>
+		<name>importDependencies</name>
+		<path>/META-INF/tags/style-bootstrap/importDependencies.tag</path>
+	</tag-file>
 	 
 	<tag-file>
 		<name>alert</name>

@@ -3,16 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 <%@ attribute name="identificador" required="true" type="java.lang.String" %>
+<%@ attribute name="nome" required="true" type="java.lang.String" %>
 <%@ attribute name="value" required="false" type="java.util.Calendar"%>
-
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
 
 <!-- Formatação da Data -->
 <fmt:formatDate value="${value.time}" pattern="dd/MM/yyyy" var="data"/>
 
 <!-- Campo de Texto -->
-<input type="text" id="${identificador}" name="${identificador}" value="${data}" readonly/>
+<input type="text" id="${identificador}" name="${nome}" value="${data}" readonly/>
 
 <!-- Datepicker(JQUERY) -->
 <script type="text/javascript">

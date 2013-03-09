@@ -13,9 +13,6 @@
 <%@ attribute name="imagem" required="false" type="java.lang.String" %>
 <%@ attribute name="retornar" required="false" description="Exibir botão de retorno(valor = 'retornar')" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- POPUP -->
 <div id="${identificador}" class="modal hide fade">
 	<div class="modal-header">

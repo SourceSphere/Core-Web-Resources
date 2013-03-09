@@ -11,10 +11,5 @@
 		<name>verifyResourceServlet</name>
 		<path>/META-INF/tags/verifyResourceServlet.tag</path>
 	</tag-file>
-	
-	<tag-file>
-		<name>importDependencies</name>
-		<path>/META-INF/tags/importDependencies.tag</path>
-	</tag-file>
 
 </taglib>

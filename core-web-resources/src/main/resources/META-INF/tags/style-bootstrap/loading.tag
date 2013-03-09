@@ -13,9 +13,6 @@
 <!-- URL's -->
 <c:url value="/webresources/img/loading.gif" var="loading"/>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- HTML -->
 <div align="${align}">
 <div id="${identificador}" class="alert alert-info fade in" style="width: ${width};height: ${height};">

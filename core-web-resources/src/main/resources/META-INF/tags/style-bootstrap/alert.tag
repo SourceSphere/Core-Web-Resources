@@ -15,9 +15,6 @@
 <%@ attribute name="hidden" required="false" type="java.lang.String" %>
 <%@ attribute name="classe" required="false" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- HTML -->
 <div align="${align}">
 	<div id="${identificador}" class="alert ${tipo} fade in ${classe}" style="width: ${width};height: ${height};" ${hidden}>

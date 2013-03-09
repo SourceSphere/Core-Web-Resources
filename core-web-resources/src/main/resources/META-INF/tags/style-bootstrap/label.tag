@@ -8,9 +8,6 @@
 <%@ attribute name="align" required="false" type="java.lang.String" %>
 <%@ attribute name="fontSize" required="false" type="java.lang.String" %>
 
-<!-- Sourcesphere dependencies check -->
-<rs:verifyResourceServlet/>
-
 <!-- HTML -->
 <div align="${align}">
 	<span style="font-size: ${fontSize};" class="label ${tipo}">${texto}</span>
