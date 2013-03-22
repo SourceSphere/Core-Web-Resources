@@ -152,7 +152,7 @@ public class ResourceServlet extends HttpServlet
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			return;
 		}
-		log.info("Resource found, loading it to the front-end output stream");
+		log.info("Resource found, loading it to the front-end output stream: '"+resourcePath+"'");
 		prepareResponse(response, resource, resourcePath);
 		
 		OutputStream out = response.getOutputStream();

@@ -2,20 +2,19 @@
 
 <!-- TAGLIBS -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://sourcesphere.com.br/jsp/tags/rs" prefix="rs" %>
 
 <!-- ATRIBUTOS -->
 <%@ attribute name="identificador" required="false" type="java.lang.String" %>
 <%@ attribute name="dados" required="true" type="java.util.List" %>
-<%@ attribute name="converter" required="true" type="br.com.sourcesphere.core.converter.Converter" %>
-<%@ attribute name="name" required="false" type="java.lang.String" %>
+<%@ attribute name="converter" required="true" type="br.com.sourcesphere.core.converter.Converter" description="To use this, you need to import the sourcesphere-core artifact to the project"%>
+<%@ attribute name="nome" required="false" type="java.lang.String" %>
 <%@ attribute name="selecionado" required="false" type="java.lang.String" %>
 
 <!-- COMBOBOX HTML -->
 <select id="${identificador}" class="combobox" name="${nome}">
 	<option selected="selected">${converter.convertTo(selecionado)}</option>
 	<c:forEach items="${dados}" var="dado">
-		<option>${converter.convertTo(dado)}</option>
+		<option value="${converter.getValue(dado)}">${converter.convertTo(dado)}</option>
 	</c:forEach>
 </select>
 
@@ -23,6 +22,6 @@
 <script>
 $(document).ready(function()
 {
-  	$('.combobox').combobox();
+  	$('#${identificador}').combobox();
 });
 </script>
