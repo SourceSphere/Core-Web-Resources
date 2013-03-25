@@ -14,14 +14,11 @@
 <select id="${identificador}" class="combobox" name="${nome}">
 	<option selected="selected">${converter.convertTo(selecionado)}</option>
 	<c:forEach items="${dados}" var="dado">
-		<option value="${converter.getValue(dado)}">${converter.convertTo(dado)}</option>
+		<c:if test="${dado.equals(selecionado) == false}">
+			<option value="${converter.getValue(dado)}">${converter.convertTo(dado)}</option>
+		</c:if>
 	</c:forEach>
 </select>
-
-<!-- COMBOBOX JAVASCRIPT -->
 <script>
-$(document).ready(function()
-{
-  	$('#${identificador}').combobox();
-});
+	$("#${identificador}").combobox();
 </script>
