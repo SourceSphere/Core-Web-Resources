@@ -6,7 +6,7 @@
 	<groupId>br.com.sourcesphere</groupId>
 	<artifactId>core-web-resources</artifactId>
 	<packaging>jar</packaging>
-	<version>2.0.0-RELEASE</version>
+	<version>2.0.0</version>
 
 	<!-- NOME -->
 	<name>WorkMeterWeb</name>
@@ -39,7 +39,7 @@
 	    <project.build.finalname>Core-Web-Resources-${project.version}</project.build.finalname>
 
 		<!-- VERSÃO DO CORE -->
-		<br.com.sourcesphere.core.version>1.1.0.RELEASE</br.com.sourcesphere.core.version>
+		<br.com.sourcesphere.core.version>1.1.0</br.com.sourcesphere.core.version>
 
 	    <!-- VERSÃO DO SPRING -->
 	    <org.springframework.version>3.2.0.RELEASE</org.springframework.version>
